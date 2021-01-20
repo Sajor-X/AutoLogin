@@ -1,0 +1,5 @@
+### test
+POST http://localhost:5000/login
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+url=http%3A%2F%2Ferpapi.test.zxdns.com%2Fapi%2Fkcone%2Fauth%2Fcaptcha%3F1611152790668%26ticket%3D0.8702179479247236

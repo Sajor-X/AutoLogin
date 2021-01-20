@@ -14,7 +14,6 @@ def hello_world():
         url = request.form['url']
         v = Verify()
         code = v.get_captcha_code(url)
-        print(code)
         return code
 
 

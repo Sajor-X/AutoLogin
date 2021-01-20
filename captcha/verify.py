@@ -84,7 +84,8 @@ class Verify(object):
 
 if __name__ == '__main__':
     v = Verify()
-    code = v.get_captcha_code("http://erpapi.test.zxdns.com/api/kcone/auth/captcha?1609512337985&ticket=0.7072632701797432")
+    # code = v.get_captcha_code("http://erpapi.test.zxdns.com/api/kcone/auth/captcha?1609512337985&ticket=0.7072632701797432")
+    code = v.denoising_ocr("captcha.png")
     print(code)
 
 
