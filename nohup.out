@@ -1,0 +1,125 @@
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jan 21 00:19:48 2021] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 20 January 2021 16:17:17
+os: Linux-3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019
+nodename: sunshuying
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/AutoLogin
+writing pidfile to /root/AutoLogin/uwsgi.pid
+detected binary path: /root/py36env/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/AutoLogin
+your processes number limit is 7270
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :5000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:43645 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jan 20 2021, 10:44:29)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0xca2e30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1031270 bytes (1007 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xca2e30 pid: 8867 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 8867)
+spawned uWSGI worker 1 (pid: 8894, cores: 2)
+spawned uWSGI worker 2 (pid: 8895, cores: 2)
+spawned uWSGI worker 3 (pid: 8896, cores: 2)
+spawned uWSGI worker 4 (pid: 8897, cores: 2)
+spawned uWSGI http 1 (pid: 8898)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 8898)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.19.1 (64bit) on [Thu Jan 21 00:20:49 2021] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-44) on 20 January 2021 16:17:17
+os: Linux-3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019
+nodename: sunshuying
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/AutoLogin
+writing pidfile to /root/AutoLogin/uwsgi.pid
+detected binary path: /root/py36env/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/AutoLogin
+your processes number limit is 7270
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :5000 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:41946 (port auto-assigned) fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.5 (default, Jan 20 2021, 10:44:29)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Python main interpreter initialized at 0x1acee30
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 1031270 bytes (1007 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1acee30 pid: 11040 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11040)
+spawned uWSGI worker 1 (pid: 11042, cores: 2)
+spawned uWSGI worker 2 (pid: 11043, cores: 2)
+spawned uWSGI worker 3 (pid: 11044, cores: 2)
+spawned uWSGI worker 4 (pid: 11045, cores: 2)
+spawned uWSGI http 1 (pid: 11046)
+[pid: 11045|app: 0|req: 1/1] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:20:53 2021] POST /login => generated 6 bytes in 928 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 2/2] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:20:54 2021] POST /login => generated 6 bytes in 998 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 3/3] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:20:55 2021] POST /login => generated 4 bytes in 1213 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 4/4] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:20:56 2021] POST /login => generated 4 bytes in 967 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 5/5] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:20:58 2021] POST /login => generated 6 bytes in 967 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 6/6] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:20:59 2021] POST /login => generated 4 bytes in 1046 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 7/7] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:00 2021] POST /login => generated 0 bytes in 901 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 8/8] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:01 2021] POST /login => generated 4 bytes in 919 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 9/9] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:02 2021] POST /login => generated 5 bytes in 977 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 10/10] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:03 2021] POST /login => generated 4 bytes in 874 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 11/11] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:04 2021] POST /login => generated 4 bytes in 968 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 12/12] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:05 2021] POST /login => generated 4 bytes in 947 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 13/13] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:06 2021] POST /login => generated 4 bytes in 1182 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 14/14] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:07 2021] POST /login => generated 4 bytes in 1051 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 15/15] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:08 2021] POST /login => generated 6 bytes in 856 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 16/16] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:21:09 2021] POST /login => generated 4 bytes in 879 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 17/17] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:18 2021] POST /login => generated 4 bytes in 1082 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 18/18] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:19 2021] POST /login => generated 4 bytes in 1087 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 19/19] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:20 2021] POST /login => generated 4 bytes in 936 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 20/20] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:21 2021] POST /login => generated 4 bytes in 997 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 21/21] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:27 2021] POST /login => generated 4 bytes in 937 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 22/22] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:28 2021] POST /login => generated 4 bytes in 930 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 23/23] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:36 2021] POST /login => generated 6 bytes in 922 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 24/24] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:22:37 2021] POST /login => generated 4 bytes in 946 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 25/25] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:23:00 2021] POST /login => generated 4 bytes in 933 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 26/26] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:23:01 2021] POST /login => generated 4 bytes in 914 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 27/27] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:23:06 2021] POST /login => generated 0 bytes in 874 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 28/28] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:23:07 2021] POST /login => generated 0 bytes in 910 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 29/29] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:23:08 2021] POST /login => generated 4 bytes in 1102 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
+[pid: 11045|app: 0|req: 30/30] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:23:09 2021] POST /login => generated 4 bytes in 1042 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 1)
+[pid: 11045|app: 0|req: 31/31] 120.245.132.144 () {44 vars in 701 bytes} [Thu Jan 21 00:23:11 2021] POST /login => generated 4 bytes in 872 msecs (HTTP/1.1 200) 4 headers in 143 bytes (1 switches on core 0)
