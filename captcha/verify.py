@@ -2,7 +2,13 @@ import tesserocr
 from PIL import Image, ImageDraw
 from urllib import request
 
+from captcha.util import Base64Util
+
+
 class Verify(object):
+    def __init__(self):
+        self.util = Base64Util()
+
     def download_file(self, uri, path=None):
         """
         下载网络资源并保存至本地
@@ -68,7 +74,7 @@ class Verify(object):
         # 二值化
         image = image.point(self.binarization(), '1')
         # 降噪
-        self.clear_noise(image, 1, 4, 2)
+        self.clear_noise(image, 1, 4, 1)
         image.save("captcha_denoising.png")
         result = tesserocr.image_to_text(image)
         return result.replace(" ", "")[:4]
@@ -79,6 +85,10 @@ class Verify(object):
                                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36")])
         request.install_opener(opener)
         file = request.urlretrieve(url, file_name)[0]
+        return self.denoising_ocr(file)
+
+    def get_code(self, base64_code):
+        file = self.util.decode_base64_file(base64_code, "none.png")
         return self.denoising_ocr(file)
 
 
