@@ -1,5 +1,14 @@
 # AutoLogin
 
+## 原理介绍
+[自动登录工具开发](http://blog.sajor.top/16110385786886.html)
+
+
+## 依赖安装
+```shell
+pip install -r requirements.txt
+```
+
 ## 接口
 http://localhost:5000/login
 
