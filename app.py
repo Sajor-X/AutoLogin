@@ -25,7 +25,7 @@ def login_base():
         request_data = request.get_data().decode('utf-8')
         data = json.loads(request_data)
         file = v.get_file(data.get("base64"))
-        count = 1 if not data.get("count") else data.get("count")
+        count = 1 if data.get("count") is None else data.get("count")
         threshold = 240 if not data.get("threshold") else data.get("threshold")
         return v.denoising_ocr(file, threshold, count)
 
