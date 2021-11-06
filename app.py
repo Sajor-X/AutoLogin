@@ -23,7 +23,9 @@ def login_base():
     v = Verify()
     if request.method == 'POST':
         request_data = request.get_data().decode('utf-8')
-        return v.get_code(json.loads(request_data).get("base64"))
+        data = json.loads(request_data)
+        file = v.get_file(data.get("base64"))
+        return v.denoising_ocr(file, data.get("threshold"), data.get("count"))
 
 
 if __name__ == '__main__':

@@ -68,13 +68,22 @@ class Verify(object):
                         # 1. 白  0. 黑
                         draw.point((x, y), color)
 
-    def denoising_ocr(self, file):
+    def denoising_ocr(self, file, threshold=240, count=1):
+        """
+        处理
+        :param file:
+        :param threshold: 阈值
+        :param count: 轮数
+        :return:
+        """
         # 灰度
         image = Image.open(file).convert('L')
         # 二值化
-        image = image.point(self.binarization(), '1')
+        image = image.point(self.binarization(threshold), '1')
         # 降噪
-        self.clear_noise(image, 1, 4, 1)
+        self.clear_noise(image, 1, 4, count)
+        image = image.resize((image.width * 2, image.height * 2), Image.ANTIALIAS)
+
         image.save("captcha_denoising.png")
         result = tesserocr.image_to_text(image)
         return result.replace(" ", "")[:4]
@@ -91,6 +100,9 @@ class Verify(object):
         file = self.util.decode_base64_file(base64_code, "none.png")
         return self.denoising_ocr(file)
 
+    def get_file(self, base64_code):
+        return self.util.decode_base64_file(base64_code, "none.png")
+
 
 if __name__ == '__main__':
     v = Verify()
@@ -98,4 +110,6 @@ if __name__ == '__main__':
     code = v.denoising_ocr("captcha.png")
     print(code)
 
+    code = v.denoising_ocr("test.png", 120, 0)
+    print(code)
 
