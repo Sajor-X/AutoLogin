@@ -6,7 +6,8 @@
 
 ## 依赖安装
 ```shell
-pip install -r requirements.txt
+pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ## 接口
