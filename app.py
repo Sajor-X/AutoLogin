@@ -16,6 +16,9 @@ def login_url():
     if request.method == 'POST':
         url = request.form['url']
         return v.get_captcha_code(url)
+    else:
+        url = request.form['url']
+        return v.save_file(url)
 
 
 @app.route('/login_base', methods=['GET', 'POST'])
@@ -28,6 +31,11 @@ def login_base():
         count = 1 if data.get("count") is None else data.get("count")
         threshold = 240 if not data.get("threshold") else data.get("threshold")
         return v.denoising_ocr(file, threshold, count)
+    else:
+        request_data = request.get_data().decode('utf-8')
+        data = json.loads(request_data)
+        file = v.get_file(data.get("base64"))
+        return v.save_file(None, file)
 
 
 if __name__ == '__main__':

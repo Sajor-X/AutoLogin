@@ -1,4 +1,5 @@
-import tesserocr
+import ddddocr
+
 from PIL import Image, ImageDraw
 from urllib import request
 
@@ -8,6 +9,7 @@ from captcha.util import Base64Util
 class Verify(object):
     def __init__(self):
         self.util = Base64Util()
+        self.ocr = ddddocr.DdddOcr(old=True)
 
     def download_file(self, uri, path=None):
         """
@@ -85,7 +87,18 @@ class Verify(object):
         image = image.resize((image.width * 2, image.height * 2), Image.ANTIALIAS)
 
         image.save("captcha_denoising.png")
-        result = tesserocr.image_to_text(image)
+        with open("captcha_denoising.png", 'rb') as f:
+            image = f.read()
+        result = self.ocr.classification(image)
+        # result = tesserocr.image_to_text(image)
+        return result.replace(" ", "")[:4]
+
+    def save_file(self, url, file_name="captcha.png"):
+        if url:
+            request.urlretrieve(url, file_name)
+        with open(file_name, 'rb') as f:
+            image = f.read()
+            result = self.ocr.classification(image)
         return result.replace(" ", "")[:4]
 
     def get_captcha_code(self, url, file_name="captcha.png"):
