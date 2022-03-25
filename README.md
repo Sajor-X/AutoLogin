@@ -3,23 +3,21 @@
 ## 原理介绍
 [自动登录工具开发](http://blog.sajor.top/16110385786886.html)
 
+## Docker 运行
 
-## 依赖安装
-```shell
-pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
-pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+运行之前需要确保 [Docker](https://www.docker.com/) 已经安装。docker运行与下方本地运行二选一即可。
+
+**mac/linux**
+
+```commandline
+sh exec.sh
+```
+
+**windows**
+
+```commandline
+.\exec.ps1
 ```
 
 ## 接口
 http://localhost:5000/login
-
-## Windows
-针对windows，可以使用此打包命令打包
-
-```shell script
-pyinstaller -F ./app.py -p ./ -n AutoLogin
-```
-
-因为需要`tesserocr`支持，所以要使用`dist`中的`tessdata`包依赖
-
-`AutoLogin/dist/AutoLogin.exe` 为已打好的包可直接在Windows中使用
